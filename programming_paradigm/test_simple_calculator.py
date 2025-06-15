@@ -25,13 +25,13 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(0, 100), 0)
         self.assertEqual(self.calc.multiply(-4, -2), 8)
 
-    def test_dividition(self):
+    def test_division(self):
         self.assertEqual(self.calc.divide(10, 2), 5)
         self.assertAlmostEqual(self.calc.divide(7, 3), 2.3333333, places=6)
         self.assertEqual(self.calc.divide(-9, 3), -3)
         self.assertEqual(self.calc.divide(-8, -2), 4)
 
-    def test_dividition_by_zero(self):
+    def test_division_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
             self.calc.divide(10, 0)
 
